@@ -1,4 +1,4 @@
-WEEK_SCHEDULE = "Duty schedule for the next week:\n\n{schedule}"
+WEEK_SCHEDULE = "Schedule for the next week:\n\n{schedule}"
 
 MORNING_REMINDER = "Good morning, {username}! Today you are on duty. Have a nice day :)"
 EVENING_REMINDER = "Good evening, {username}! Tomorrow you will be on duty. Good luck :)"
