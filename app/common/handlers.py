@@ -76,10 +76,11 @@ def set_schedule(platform: str, chat_id: str) -> Optional[str]:
 
     shuffle(users)
     
-    try:
-        element_idx = users.index(cache.get_schedule(platform, chat_id)[-1]) + 1
-    except (IndexError, ValueError):
-        element_idx = 0
+    # try:
+    #     element_idx = users.index(cache.get_schedule(platform, chat_id)[-1]) + 1
+    # except (IndexError, ValueError):
+    #     element_idx = 0
+    element_idx = 0
 
     schedule = []
     for _ in range(DAYS_OF_DUTY):
