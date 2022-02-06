@@ -31,6 +31,8 @@ services:
       - redis
   redis:
     image: redis:alpine
+    volumes:
+      - redis-data:/data
     healthcheck:
       test: [ "CMD", "redis-cli", "ping" ]
       interval: 1s
