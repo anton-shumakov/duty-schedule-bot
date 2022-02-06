@@ -2,6 +2,7 @@ import calendar
 import logging
 from datetime import datetime, timedelta
 from typing import Optional
+from random import shuffle
 
 from app.config import DAYS_OF_DUTY
 
@@ -73,6 +74,8 @@ def set_schedule(platform: str, chat_id: str) -> Optional[str]:
     if not users:
         return None
 
+    shuffle(users)
+    
     try:
         element_idx = users.index(cache.get_schedule(platform, chat_id)[-1]) + 1
     except (IndexError, ValueError):
